@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+# Usage: `bin/scrape wnbf`
+if ARGV.length == 1
+  if ARGV[0] == "wnbf"
+    # TODO
+  end
+end
