@@ -2,12 +2,13 @@ require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
 require "sinatra/reloader" if development?
-require 'yaml'
-require 'date'
+
+require_relative 'app/shows'
+
+shows ||= Shows.new
 
 get '/' do
-  shows = YAML.load_file("wnbf_events_2022.yaml", permitted_classes: [Date])
-  erb :index, :locals => {shows: shows}
+  erb :index, :locals => { shows: shows.get }
 end
 
 get '/about' do
