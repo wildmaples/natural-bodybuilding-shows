@@ -7,3 +7,5 @@ gem "sinatra"
 gem "sinatra-contrib"
 gem "nokogiri"
 gem "puma"
+
+gem "rspec"
