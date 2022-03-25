@@ -9,5 +9,5 @@ get '/' do
 end
 
 get '/about' do
-  "<h1> TODO </h1>"
+  erb :about
 end
