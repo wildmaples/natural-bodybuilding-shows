@@ -1,0 +1,12 @@
+<h1> Natural Bodybuilding Shows 2022 </h1>
+
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+<ul>
+<% shows["events"].each do |name, values| %>
+  <li> <%= values["date"] %> - <a href=<%= values["url"] %> target="_blank"> <%= name %></a></li>
+<% end %>
+</ul>
