@@ -1,27 +1,29 @@
 ---
+validated: false
+last_updated: 2022-03-25
 events:
   WNBF INBF Iron Eagle:
-    date: March 19
+    date: 2022-03-19
     state: GA
     url: https://www.worldnaturalbb.com/wnbf-inbf-iron-eagle/
   INBF Polynesian Muscle Mayhem:
-    date: '2023'
+    date: 2023-01-01
     state: HI
     url: https://www.worldnaturalbb.com/inbf-polynesian-natural-muscle-mayhem/
   INBF Natural USA:
-    date: April 23
+    date: 2022-04-23
     state: NY
     url: https://www.worldnaturalbb.com/wnbf-pro-physique-grand-prix-inbf-eastern-usa/
   INBF Wisconsin Natural:
-    date: April 23
+    date: 2022-04-23
     state: WI
     url: https://www.worldnaturalbb.com/inbf-wisconsin-natural/
   INBF South Carolina Natural:
-    date: April 30
+    date: 2022-04-30
     state: SC
     url: https://www.worldnaturalbb.com/inbf-south-carolina-natural/
   INBF SpringMania:
-    date: May 15
+    date: 2022-05-15
     state: MA
     url: https://www.worldnaturalbb.com/inbf-springmania/
   INBF WNBF Tri-State Natural:
@@ -29,103 +31,103 @@ events:
     state: OH
     url: https://www.worldnaturalbb.com/inbf-tri-state-championships-ohio/
   INBF Tulsa Natural:
-    date: June 4
+    date: 2022-06-04
     state: OK
     url: https://www.worldnaturalbb.com/inbf-tulsa-naturals/
   Northeast Classic + Pro American:
-    date: June 4-5
+    date: 2022-06-04
     state: MA
     url: https://www.worldnaturalbb.com/inbf-northeast-classic-wnbf-pro-american/
   INBF Mr. and Mrs. Natural Connecticut:
-    date: June 11
+    date: 2022-06-11
     state: CT
     url: https://www.worldnaturalbb.com/inbf-mr-mrs-natural-connecticut/
   Natural Columbia Classic Pro/Am:
-    date: June 11
+    date: 2022-06-11
     state: WA
     url: https://www.worldnaturalbb.com/natural-columbia-classic/
   INBF South Shore Natural:
-    date: June 18
+    date: 2022-06-18
     state: MA
     url: https://www.worldnaturalbb.com/inbf-south-shore-natural/
   INBF Hollywood Super Natural:
-    date: '2023'
+    date: 2023-01-01
     state: CA
     url: https://www.worldnaturalbb.com/inbf-hollywood-super-natural-california/
   INBF Empire State Cup:
-    date: '2023'
+    date: 2023-01-01
     state: NY
     url: https://www.worldnaturalbb.com/inbf-empire-state-cup/
   Hercules Pro/Am:
-    date: June 25
+    date: 2022-06-25
     state: NY
     url: https://www.worldnaturalbb.com/inbf-hercules-wnbf-pro-masters/
   Natural Muscle Mayhem Pro/Am:
-    date: July 16
+    date: 2022-07-16
     state: CA
     url: https://www.worldnaturalbb.com/wnbf-pro-usa-inbf-california-natural-muscle-mayhem/
   INBF Cecil Phillips Classic:
-    date: July 30
+    date: 2022-07-30
     state: OR
     url: https://www.worldnaturalbb.com/inbf-cecil-phillips-classic/
   Natural North American:
-    date: July 30
+    date: 2022-07-30
     state: MD
     url: https://www.worldnaturalbb.com/natural-north-american/
   INBF WNBF Masters Northwest Royal Natural:
-    date: August 6
+    date: 2022-08-06
     state: WA
     url: https://www.worldnaturalbb.com/inbf-northwest-royal-natural-championships/
   INBF Oklahoma City Classic (OKC):
-    date: August 6
+    date: 2022-08-06
     state: OK
     url: https://www.worldnaturalbb.com/inbf-okc/
   INBF Summer Explosion + WNBF US Pro Cup:
-    date: August 20
+    date: 2022-08-20
     state: CT
     url: https://www.worldnaturalbb.com/wnbf-inbf-natural-autumn-explosion/
   Natural Central Valley Championships:
-    date: August 20
+    date: 2022-08-20
     state: CA
     url: https://www.worldnaturalbb.com/natural-central-valley-championships/
   Washington State Olympic Championships:
-    date: September 3
+    date: 2022-09-03
     state: WA
     url: https://www.worldnaturalbb.com/washington-state-olympic-championships/
   INBF Naturalmania WNBF Pro Universe:
-    date: September 24
+    date: 2022-09-24
     state: NY
     url: https://www.worldnaturalbb.com/inbf-naturalmania/
   INBF Southern Natural:
-    date: September 24
+    date: 2022-09-24
     state: GA
     url: https://www.worldnaturalbb.com/inbf-southern-natural/
   INBF Phoenician Classic:
-    date: Sept/Oct
+    date: TBA
     state: AZ
     url: https://www.worldnaturalbb.com/inbf-phoenician-classic/
   INBF Carolina Natural PC:
-    date: October 1
+    date: 2022-10-01
     state: NC
     url: https://www.worldnaturalbb.com/inbf-carolina-natural-pc/
   INBF Battle of the Bay:
-    date: October 1
+    date: 2022-10-01
     state: CA
     url: https://www.worldnaturalbb.com/inbf-battle-bay/
   INBF WNBF Washington State Puget Sound Pro/Am:
-    date: October 15
+    date: 2022-10-15
     state: WA
     url: https://www.worldnaturalbb.com/inbf-washington-state-natural/
   INBF Battle for Broadway:
-    date: October 22
+    date: 2022-10-22
     state: NY
     url: https://www.worldnaturalbb.com/inbf-battle-for-broadway/
   INBF Granite State Open:
-    date: October 29
+    date: 2022-10-29
     state: NH
     url: https://www.worldnaturalbb.com/inbf-granite-state-open/
   INBF WNBF Monster Mash Pro/Am:
-    date: November 5-7
+    date: 2022-11-05
     state: MA
     url: https://www.worldnaturalbb.com/inbf-monster-mash-wnbf-pro-masters-american/
   INBF Central USA:
@@ -133,12 +135,10 @@ events:
     state: TBA
     url: https://www.worldnaturalbb.com/inbf-central-usa-2/
   The LA Natural:
-    date: TBA
-    state: TBA
+    date: 2022-11-05
+    state: CA
     url: https://www.worldnaturalbb.com/the-la-natural/
   World Championships:
-    date: November 19 -20
+    date: 2022-11-19
     state: Los Angeles, CA
     url: https://www.worldnaturalbb.com/inbf-wnbf-worlds-33/
-last_updated: 2022-03-24
-validated: true 
