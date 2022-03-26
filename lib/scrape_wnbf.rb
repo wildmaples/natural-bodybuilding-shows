@@ -51,5 +51,5 @@ events.each do |event|
 end
 
 date_today = Date.today
-file = File.path("db/wnbf_events_#{date_today.to_s}.yaml")
+file = File.path("db/wnbf_events_#{date_today.to_s}.yml")
 Utils.store_as_yaml(file, wnbf_events)

@@ -36,5 +36,5 @@ events.each_slice(3) do |x, y, z|
 end
 
 date_today = Date.today
-file = File.path("db/ocb_amateur_events_#{date_today.to_s}.yaml")
+file = File.path("db/ocb_amateur_events_#{date_today.to_s}.yml")
 Utils.store_as_yaml(file, ocb_amateur_events)
