@@ -6,7 +6,7 @@
 </ul>
 
 <ul>
-<% shows["events"].each do |name, values| %>
+<% shows.each do |name, values| %>
   <li> <%= values["date"] %> - <a href=<%= values["url"] %> target="_blank"> <%= name %></a></li>
 <% end %>
 </ul>
