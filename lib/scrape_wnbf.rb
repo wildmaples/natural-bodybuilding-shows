@@ -31,13 +31,13 @@ response = Net::HTTP.get_response(uri)
 return unless response.is_a?(Net::HTTPSuccess)
 
 html = Nokogiri::HTML(response.body)
-events = html.xpath("//div[@class='menu-all-events-container']").at_xpath("//ul[@id='menu-all-events']").children.children
+events = html.xpath("//ul[@id='menu-all-events']/li/a")
 
 wnbf_events = {}
 events.each do |event|
   # Get the two fields we need
-  event_link = event.attributes["href"].value
-  event_label = event.children.text
+  event_link = event["href"]
+  event_label = event.text
 
   # The event label contains date, event name and state
   date, name, state = split(event_label)

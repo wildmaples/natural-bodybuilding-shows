@@ -18,10 +18,10 @@ ocb_amateur_events = {}
 
 events.each_slice(3) do |x, y, z|
   begin
-    date = x.children.text
-    location = y.children.text
-    name = z.children[1].children.text
-    url = z.children[1].attributes["href"].value
+    date = x.text
+    location = y.text
+    name = z.children[1].text
+    url = z.children[1]["href"]
 
     ocb_amateur_events[name.strip] = {
       "date" => Utils.convert_date(date.strip),
