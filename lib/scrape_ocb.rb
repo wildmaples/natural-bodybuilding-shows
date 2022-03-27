@@ -16,23 +16,20 @@ events = html.xpath("//td[@data-title]")
 
 ocb_amateur_events = {}
 
+# OCB site organizes their shows in
+# a html table with 3 columns containing
+# the date, location and name (with url)
 events.each_slice(3) do |x, y, z|
-  begin
-    date = x.text
-    location = y.text
-    name = z.children[1].text
-    url = z.children[1]["href"]
+  date = x.text
+  location = y.text
+  name = z.children[1].text
+  url = z.children[1]["href"]
 
-    ocb_amateur_events[name.strip] = {
-      "date" => Utils.convert_date(date.strip),
-      "location" => location.strip,
-      "url" => url.strip
-    }
-
-  rescue TypeError => e
-    require 'byebug'; debugger
-    puts "wtf"
-  end
+  ocb_amateur_events[name.strip] = {
+    "date" => Utils.convert_date(date.strip),
+    "location" => location.strip,
+    "url" => url.strip
+  }
 end
 
 date_today = Date.today
