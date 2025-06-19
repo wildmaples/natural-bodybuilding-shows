@@ -1,0 +1,26 @@
+== Sinatra (v4.1.1) has taken the stage on 4567 for development with backup from Puma
+Puma starting in single mode...
+* Puma version: 6.6.0 ("Return to Forever")
+* Ruby version: ruby 3.4.4 (2025-05-14 revision a38531fd3f) +PRISM [arm64-darwin24]
+*  Min threads: 0
+*  Max threads: 5
+*  Environment: development
+*          PID: 68136
+== Someone is already performing on port 4567!
+== Sinatra has ended his set (crowd applauds)
+/Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:342:in 'TCPServer#initialize': Address already in use - bind(2) for "127.0.0.1" port 4567 (Errno::EADDRINUSE)
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:342:in 'IO.new'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:342:in 'Puma::Binder#add_tcp_listener'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:336:in 'block in Puma::Binder#add_tcp_listener'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:335:in 'Array#each'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:335:in 'Puma::Binder#add_tcp_listener'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:171:in 'block in Puma::Binder#parse'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:154:in 'Array#each'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/binder.rb:154:in 'Puma::Binder#parse'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/runner.rb:175:in 'Puma::Runner#load_and_bind'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/single.rb:44:in 'Puma::Single#run'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/puma/launcher.rb:203:in 'Puma::Launcher#run'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/puma-6.6.0/lib/rack/handler/puma.rb:79:in 'Puma::RackHandler#run'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/sinatra-4.1.1/lib/sinatra/base.rb:1694:in 'Sinatra::Base.start_server'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/sinatra-4.1.1/lib/sinatra/base.rb:1633:in 'Sinatra::Base.run!'
+	from /Users/mapleong/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/sinatra-4.1.1/lib/sinatra/main.rb:47:in 'block in <module:Sinatra>'

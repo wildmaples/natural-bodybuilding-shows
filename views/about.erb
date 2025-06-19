@@ -1,8 +1,63 @@
-<h1> Natural Bodybuilding Shows 2022 </h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About - Natural Bodybuilding Shows</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .header { border-bottom: 2px solid #333; margin-bottom: 20px; padding-bottom: 10px; }
+    .nav { margin-bottom: 20px; }
+    .nav a { margin-right: 15px; text-decoration: none; color: #0066cc; }
+    .nav a:hover { text-decoration: underline; }
+    .content { line-height: 1.6; }
+    .federations { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+    .federation-card { border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+    .federation-card h3 { margin-top: 0; color: #0066cc; }
+    .federation-card h3 a { color: #0066cc; text-decoration: none; }
+    .federation-card h3 a:hover { text-decoration: underline; }
+    .federation-link { margin-top: 10px; }
+    .federation-link a { background: #0066cc; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; display: inline-block; }
+    .federation-link a:hover { background: #0052a3; }
+    .schedule-info { background: #e8f4fd; padding: 15px; border-radius: 5px; border-left: 4px solid #0066cc; margin: 20px 0; }
+    @media (max-width: 768px) { .federations { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>About Natural Bodybuilding Shows</h1>
+    <div class="nav">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </div>
+  </div>
 
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
+  <div class="content">
+    <h2>What This Site Does</h2>
+    <p>All natural bodybuilding competition schedules in one convenient location! Instead of checking each organization's website separately, you can see all upcoming natural bodybuilding shows in one place.</p>
 
-<h1> TODO </h1>
+    <h2>For Competitors</h2>
+    <p>Whether you're looking to compete in your first natural bodybuilding show or you're a seasoned competitor planning your competition season, this site helps you:</p>
+    <ul>
+      <li>Find shows in your area or region</li>
+      <li>Plan your competition calendar</li>
+    </ul>
+
+    <h2>Natural Bodybuilding Federations</h2>
+    <div class="federations">
+      <div class="federation-card">
+        <h3><a href="https://worldnaturalbb.com/" target="_blank">WNBF (World Natural Bodybuilding Federation)</a></h3>
+        <p>Professional natural bodybuilding competitions worldwide. WNBF is one of the premier natural bodybuilding organizations with strict drug testing protocols.</p>
+        <div class="federation-link">
+          <a href="https://worldnaturalbb.com/" target="_blank">Visit WNBF Website →</a>
+        </div>
+      </div>
+      <div class="federation-card">
+        <h3><a href="https://ocbonline.com/" target="_blank">OCB (Organization of Competitive Bodybuilders)</a></h3>
+        <p>Amateur natural bodybuilding competitions across the United States. OCB shows are drug-tested and follow strict natural bodybuilding guidelines.</p>
+        <div class="federation-link">
+          <a href="https://ocbonline.com/" target="_blank">Visit OCB Website →</a>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

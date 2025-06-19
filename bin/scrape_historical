@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/scrape_historical_ocb'
+
+puts "🔍 Starting historical OCB scraping..."
+puts "Fetching past shows from January 2025 to now..."
+
+scraper = HistoricalOcbScraper.new
+events = scraper.scrape_historical_events
+
+if events.any?
+  puts "✅ Successfully scraped #{events.length} historical events"
+  scraper.save_historical_events(events)
+  puts "💾 Historical events saved to database"
+  
+  puts "\n🗓️ Historical events found:"
+  events.each do |name, data|
+    date_str = data["date"].is_a?(Date) ? data["date"].strftime("%b %d, %Y") : data["date"]
+    location = data["location"] || data["state"] || "Unknown location"
+    puts "  • #{date_str}: #{name} (#{location})"
+  end
+else
+  puts "❌ No historical events found"
+end
+
+puts "\n🚀 Done! Start the web app to see past shows in the Past Shows tab." 

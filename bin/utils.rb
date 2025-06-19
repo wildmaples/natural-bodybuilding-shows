@@ -30,10 +30,19 @@ class Utils
 
   def self.store_as_yaml(file, data)
     store = YAML::Store.new(file)
+    # Configure YAML::Store to allow Date class for Ruby 3+ compatibility
     store.transaction do
       store["validated"] = false
       store["last_updated"] = Date.today
       store["events"] = data
     end
+  rescue Psych::DisallowedClass => e
+    # Fallback: use regular YAML for Ruby 3+ compatibility
+    yaml_data = {
+      "validated" => false,
+      "last_updated" => Date.today,
+      "events" => data
+    }
+    File.write(file, yaml_data.to_yaml)
   end
 end

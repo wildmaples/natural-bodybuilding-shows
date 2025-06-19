@@ -1,0 +1,589 @@
+---
+validated: false
+last_updated: 2025-06-19
+events:
+  OCB All-Natural PA Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-06-21
+    location: Harrisburg, PA
+    url: https://ocbonline.com/events/eventinfo.php?event=NTg1&eventinfo=OCB062125PA
+    federation: OCB
+  OCB Hall of Fame Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-06-21
+    location: Lexington, MA
+    url: https://ocbonline.com/events/eventinfo.php?event=NTY3&eventinfo=OCB062925MA
+    federation: OCB
+  OCB Wisconsin Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-09-20
+    location: Madison, WI
+    url: https://ocbonline.com/events/eventinfo.php?event=NTc3&eventinfo=OCB092025WI
+    federation: OCB
+  OCB Los Campeones Cup Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-06-28
+    location: Minneapolis, MN
+    url: https://www.nxnevents.com
+    federation: OCB
+  OCB Colonial Open (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-06-28
+    location: Williamsburg, VA
+    url: https://ocbonline.com/events/eventinfo.php?event=NTY1&eventinfo=OCB062825VA
+    federation: OCB
+  OCB Bay Area Championships (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-06-28
+    location: Oakland, CA
+    url: https://ocbonline.com/events/eventinfo.php?event=NjEy&eventinfo=OCB062825CA
+    federation: OCB
+  OCB Music City Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-07-12
+    location: Nashville, TN
+    url: https://ocbonline.com/events/eventinfo.php?event=NTgx&eventinfo=OCB071225TN
+    federation: OCB
+  OCB Kekoa Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-07-19
+    location: Oahu, HI
+    url: https://ocbonline.com/events/eventinfo.php?event=NjE1&eventinfo=OCB071925HI
+    federation: OCB
+  OCB Canadian True Naturals (Yorton Cup Qualifier; OCB Pro Qualifier):
+    date: 2025-07-19
+    location: Toronto, Canada
+    url: https://ocbonline.com/events/eventinfo.php?event=NjMy&eventinfo=OCB071925ON
+    federation: OCB
+  OCB Natural Kingdom (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-07-19
+    location: Orlando, FL
+    url: https://form.jotform.com/232164506020139
+    federation: OCB
+  OCB Jack King's Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-07-19
+    location: Winston-Salem, NC
+    url: https://ocbonline.com/events/eventinfo.php?event=NjA2&eventinfo=OCB071925NC
+    federation: OCB
+  OCB Mayhem on the Mountain (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-07-19
+    location: Nashua, NH
+    url: https://ocbonline.com/events/eventinfo.php?event=NjA3&eventinfo=OCB071925NH
+    federation: OCB
+  OCB Dayton Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-07-19
+    location: Dayton, OH
+    url: https://ocbonline.com/events/eventinfo.php?event=NTgz&eventinfo=OCB071925OH
+    federation: OCB
+  OCB Best of the Midwest Naturals (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-07-19
+    location: St Louis,  MO
+    url: https://ocbonline.com/events/eventinfo.php?event=NjA0&eventinfo=OCB071925MO
+    federation: OCB
+  OCB Natural New Mexico (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-07-27
+    location: Albuquerque, NM
+    url: https://bodybeautifulbronzingllc.com/competition-events/
+    federation: OCB
+  OCB Slayer Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-02
+    location: Phoenix, AZ
+    url: https://www.petrosproperformance.com/events
+    federation: OCB
+  OCB Kentucky Natural Championships (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-02
+    location: Louisville, KY
+    url: https://ocbonline.com/events/eventinfo.php?event=NTcw&eventinfo=OCB080925KY
+    federation: OCB
+  OCB Divine Muscle (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-02
+    location: Atlanta, GA
+    url: https://ocbonline.com/events/eventinfo.php?event=NTky&eventinfo=OCB080225GA
+    federation: OCB
+  OCB Big Apple (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-02
+    location: New York , NY
+    url: https://ocbonline.com/events/eventinfo.php?event=NTk2&eventinfo=OCB080225NY
+    federation: OCB
+  OCB Oklahoma City Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-02
+    location: Oklahoma City, OK
+    url: https://ocbonline.com/events/eventinfo.php?event=NjA4&eventinfo=OCB080225OK
+    federation: OCB
+  OCB Presidential Cup Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-10
+    location: Washington, DC
+    url: https://ocbonline.com/events/eventinfo.php?event=NjA5&eventinfo=OCB081025DC
+    federation: OCB
+  OCB Windy City Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-16
+    location: Chicago, IL
+    url: https://ocbonline.com/events/eventinfo.php?event=NTkz&eventinfo=OCB081625IL
+    federation: OCB
+  OCB Colorado Natural Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-16
+    location: Denver, CO
+    url: http://www.ocbcolorado.com/
+    federation: OCB
+  OCB Natty Niagara (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-16
+    location: Niagara, NY
+    url: https://ocbonline.com/events/eventinfo.php?event=NjMx&eventinfo=OCB081625NY
+    federation: OCB
+  OCB Battle of the Great Lakes Naturals (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-23
+    location: Cleveland, OH
+    url: https://ocbonline.com/events/eventinfo.php?event=NTk1&eventinfo=OCB082325OH
+    federation: OCB
+  OCB Mid-Atlantic Battle for the Belt  (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-23
+    location: Burlington, NJ
+    url: https://ocbonline.com/events/eventinfo.php?event=NjEz&eventinfo=OCB082325NJ
+    federation: OCB
+  OCB Lone Star Rising (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-23
+    location: Dallas, TX
+    url: https://bodybeautifulbronzingllc.com/competition-events/
+    federation: OCB
+  OCB Fire and Ice Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-30
+    location: Panama City Beach, FL
+    url: https://ocbonline.com/events/eventinfo.php?event=NjEw&eventinfo=OCB080925FL
+    federation: OCB
+  OCB Low Country Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-30
+    location: Hilton Head, SC
+    url: https://ocbonline.com/events/eventinfo.php?event=NTUw&eventinfo=OCB083025SC
+    federation: OCB
+  OCB Brasil (Yorton Cup Qualifier; OCB Pro Qualifier):
+    date: 2025-08-30
+    location: Porto Seguro Bahia, Brasil
+    url: https://ocbonline.com/events/eventinfo.php?event=NjM0&eventinfo=OCB083025BR
+    federation: OCB
+  OCB Oceania Supernatural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-08-31
+    location: Ipswich, Queensland Australia
+    url: https://ocbonline.com/events/eventinfo.php?event=NjM1&eventinfo=OCB083125QLD
+    federation: OCB
+  OCB Eastern America (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-09-06
+    location: "\U0001D5B4\U0001D5C9\U0001D5CD\U0001D5C8\U0001D5C7, MA"
+    url: https://ocbonline.com/events/eventinfo.php?event=NjE0&eventinfo=OCB090625MA
+    federation: OCB
+  OCB Salt Lake City Natural (Yorton Cup Qualifier, OCB Pro Qualifierr):
+    date: 2025-09-06
+    location: Salt Lake City, UT
+    url: https://bodybeautifulbronzingllc.com/events/ocb-salt-lake-city-natural-registration-sept-6-2025/?fbclid=PAZXh0bgNhZW0CMTEAAad-v-1HK1uGPChLRzr7CSIT1HwvDtnbUKo_K9sRXMhDSmXYVq0hc5kJ6MTZCA_aem_QDGzKrsX0Of
+    federation: OCB
+  OCB Apex Virginia Natural Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-09-06
+    location: Norfolk,VA
+    url: https://ocbonline.com/events/eventinfo.php?event=NTkx&eventinfo=OCB090625VA
+    federation: OCB
+  OCB Vegas Iron Natural  (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-09-13
+    location: Las Vegas, NV
+    url: https://www.ocbvegasshows.com/
+    federation: OCB
+  OCB Michigan Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-06-06
+    location: Grand Rapids MI
+    url: https://ocbonline.com/events/eventinfo.php?event=NjQ2&eventinfo=OCB060626MI
+    federation: OCB
+  OCB Tennessee Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-09-13
+    location: Knoxville, TN
+    url: https://ocbonline.com/events/eventinfo.php?event=NjAz&eventinfo=OCB091325TN
+    federation: OCB
+  OCB Natural Viking Classic Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-09-13
+    location: Minneapolis, MN
+    url: https://www.nxnevents.com/naturalviking
+    federation: OCB
+  OCB Capital City Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-09-14
+    location: Albany, NY
+    url: https://linktr.ee/capitalcitynatural
+    federation: OCB
+  OCB KC Muscle Smoke Show (Yorton Cup Qualifier; OCB Pro Qualifier):
+    date: 2025-09-20
+    location: Gardner, KS
+    url: https://ocbonline.com/events/eventinfo.php?event=NjM2&eventinfo=OCB092025KS
+    federation: OCB
+  OCB Carolina Fitness Festival (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-09-21
+    location: Raleigh, NC
+    url: https://carolinafitnessfestival.com
+    federation: OCB
+  OCB Seattle Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Seattle, WA
+    url: mailto:chad@ocbonline.com
+    federation: OCB
+  OCB Colorado Showdown (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-04
+    location: Colorado Springs, CO
+    url: http://www.ocbcolorado.com/
+    federation: OCB
+  OCB Natural Steel City Championships (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-04
+    location: Pittsburgh, PA
+    url: https://ocbonline.com/events/eventinfo.php?event=NjE4&eventinfo=OCB100425PA
+    federation: OCB
+  OCB Mid-Florida Naturals (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-05
+    location: Port St Lucie, FL
+    url: https://ocbonline.com/events/eventinfo.php?event=NTc4&eventinfo=OCB100525FL
+    federation: OCB
+  OCB Stone Classic Bodybuilding Championship (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-11
+    location: Myrtle Beach, SC
+    url: https://ocbstoneclassicbodybuilding.com
+    federation: OCB
+  OCB Midwest Natural Showdown (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-11
+    location: Sioux Falls, SD
+    url: http://nxnevents.com/
+    federation: OCB
+  OCB Cape Cod Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-11
+    location: Cape Cod, MA
+    url: https://ocbonline.com/events/eventinfo.php?event=NTk5&eventinfo=OCB101125MA
+    federation: OCB
+  OCB Sidewinder Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-11
+    location: Phoenix, AZ
+    url: https://www.petrosproperformance.com/ocbsidewinder
+    federation: OCB
+  OCB Chesapeake Classic & Pro Masters Nationals (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-11
+    location: Baltimore, MD
+    url: https://ocbonline.com/events/eventinfo.php?event=NjE2&eventinfo=OCB101125MD
+    federation: OCB
+  OCB Natural Elite Physique (OCB Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-11
+    location: Indianapolis, IN
+    url: https://ocbonline.com/events/eventinfo.php?event=NjI2&eventinfo=OCB101125IN
+    federation: OCB
+  OCB Great Britain Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-18
+    location: London, The United Kingdom
+    url: https://ocbonline.com/events/eventinfo.php?event=NTQ4&eventinfo=OCB101825UK
+    federation: OCB
+  OCB West Coast Warrior (OCB Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-10-18
+    location: Hermosa Beach, CA
+    url: https://ocbonline.com/events/eventinfo.php?event=NTk3&eventinfo=OCB101825CA
+    federation: OCB
+  OCB Hammer Forged (Yorton Cup Qualifier; OCB Pro Qualifier):
+    date: 2025-10-25
+    location: Pell City, AL
+    url: https://ocbonline.com/events/eventinfo.php?event=NjQy&eventinfo=OCB102525AL
+    federation: OCB
+  OCB Muscle Massacre Classic (Yorton Cup Qualifier; OCB Pro Qualifier):
+    date: 2025-10-25
+    location: Omaha, NE
+    url: https://ocbonline.com/events/eventinfo.php?event=NTk4&eventinfo=OCB102525NE
+    federation: OCB
+  OCB Natty Knights (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-01
+    location: Nashville, TN
+    url: https://ocbonline.com/events/eventinfo.php?event=NjI3&eventinfo=OCB110125TN
+    federation: OCB
+  OCB Franco Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-02
+    location: Doylestown, PA
+    url: https://ocbonline.com/events/eventinfo.php?event=NjI5&eventinfo=OCB110125PA
+    federation: OCB
+  OCB Battle of the Unrivaled (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-08
+    location: Fayetteville, NC
+    url: https://ocbonline.com/events/eventinfo.php?event=NjMw&eventinfo=OCB110825NC
+    federation: OCB
+  OCB Tampa Natural  Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-08
+    location: Tampa, FL
+    url: https://ocbonline.com/events/eventinfo.php?event=NjIw&eventinfo=OCB110825FL
+    federation: OCB
+  OCB NYS Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-08
+    location: Syracuse, NY
+    url: https://www.nysnatural.com
+    federation: OCB
+  OCB Las Vegas Showdown (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-08
+    location: Las Vegas, NV
+    url: https://www.ocbvegasshows.com/
+    federation: OCB
+  OCB Cincinnati Showdown (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-16
+    location: Cincinnati, OH
+    url: https://ocbonline.com/events/eventinfo.php?event=NjIx&eventinfo=OCB111625OH
+    federation: OCB
+  OCB Midwest States (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-22
+    location: DeKalb, IL
+    url: https://ocbmidweststates.com/entry-form/
+    federation: OCB
+  OCB Battle of the Godz Pro/Am (Yorton Cup, OCB Pro Qualifier):
+    date: 2025-11-22
+    location: Providence, RI
+    url: https://ocbonline.com/events/eventinfo.php?event=NjE5&eventinfo=OCB112225RI
+    federation: OCB
+  OCB Mt Rogers (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-22
+    location: Woodbridge, VA
+    url: https://ocbonline.com/events/eventinfo.php?event=NjI1&eventinfo=OCB112225VA
+    federation: OCB
+  OCB Gem State Natural  (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-11-22
+    location: Boise, ID
+    url: https://ocbonline.com/events/eventinfo.php?event=NjI4&eventinfo=OCB110125ID
+    federation: OCB
+  OCB Desert Valley Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-12-06
+    location: Tucson, AZ
+    url: https://bodybeautifulbronzingllc.com/competition-events/
+    federation: OCB
+  OCB San Antonio Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-12-06
+    location: San Antonio, TX
+    url: https://ocbonline.com/events/eventinfo.php?event=NjI0&eventinfo=OCB120625TX
+    federation: OCB
+  OCB Queen City Showdown (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-12-06
+    location: Charlotte, NC
+    url: https://ocbonline.com/events/eventinfo.php?event=NjIz&eventinfo=OCB120625NC
+    federation: OCB
+  OCB Richmond Championships (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2025-12-13
+    location: Richmond, VA
+    url: https://ocbonline.com/events/eventinfo.php?event=NjEx&eventinfo=OCB121325VA
+    federation: OCB
+  OCB Winter Classic Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-01-17
+    location: Tallahassee, FL
+    url: https://www.slyzonefitness.com/
+    federation: OCB
+  OCB Body Sculpting Open (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-02-07
+    location: Williamsburg, VA
+    url: https://ocbonline.com/events/eventinfo.php?event=NjMz&eventinfo=OCB020726VA
+    federation: OCB
+  OCB Space City Muscle  (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-02-14
+    location: Houston, TX
+    url: https://ocbonline.com/events/eventinfo.php?event=NjM4&eventinfo=OCB021426TX
+    federation: OCB
+  OCB Gains and Glory Natural  (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-02-14
+    location: Wilmington, NC
+    url: https://ocbonline.com/events/eventinfo.php?event=NjM3&eventinfo=OCB021426NC
+    federation: OCB
+  OCB Double Down Natural Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-02-22
+    location: Atlantic City, NJ
+    url: https://ocbonline.com/events/eventinfo.php?event=NjQ1&eventinfo=OCB022226NJ
+    federation: OCB
+  OCB Sun Valley Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-02-28
+    location: Phoenix, AZ
+    url: https://ocbonline.com/events/eventinfo.php?event=NjQ0&eventinfo=OCB022826AZ
+    federation: OCB
+  OCB Albuquerque Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Albuquerque, NM
+    url: https://bodybeautifulbronzingllc.com/competition-events/
+    federation: OCB
+  OCB Indy Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Indianapolis, IN
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Captain's Cup Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-03-14
+    location: Tampa, FL
+    url: https://www.captainscup.org/
+    federation: OCB
+  OCB Coastal Clash Natural  (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-03-21
+    location: Hilton Head, SC
+    url: https://ocbonline.com/events/eventinfo.php?event=NjM5&eventinfo=OCB032126SC
+    federation: OCB
+  OCB Garden State Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-03-21
+    location: Bloomfield, NJ
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Shamrock Cup Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-03-21
+    location: Durham, NH
+    url: https://shamrockcupclassic.com
+    federation: OCB
+  OCB Immortal Muscle Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-03-28
+    location: Buford, GA
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Las Vegas Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-03-28
+    location: Las Vegas, NV
+    url: mailto:frank@ocbonline.com
+    federation: OCB
+  OCB Southwest Showdown (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Tucson, AZ
+    url: https://bodybeautifulbronzingllc.com/competition-events/
+    federation: OCB
+  OCB Treasure Coast Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Port Saint Lucie, FL
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Seattle Muscle Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Seattle, WA
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Spring Naturals (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: DeKalb, IL
+    url: https://ocbmidweststates.com/entry-form-spring/
+    federation: OCB
+  OCB Best of the 'Burgh (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Pittsburgh, PA
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB The Maine Event (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Portland, ME
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Blaze of Glory (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-04-11
+    location: Bridgeport, CT
+    url: https://ocbonline.com/events/eventinfo.php?event=NjQz&eventinfo=OCB041126CT
+    federation: OCB
+  OCB Colorado Eclipse Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-04-11
+    location: Denver, CO
+    url: https://www.ocbcolorado.com/
+    federation: OCB
+  OCB Magnum Muscle Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-04-18
+    location: Liberty, SC
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Magic City Muscle (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-04-18
+    location: Birmingham, AL
+    url: https://ocbonline.com/events/eventinfo.php?event=NjQw&eventinfo=OCB041826AL
+    federation: OCB
+  OCB Big East Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-04-18
+    location: Syracuse, NY
+    url: https://www.nysnatural.com/
+    federation: OCB
+  OCB Atlantic Super Show (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-04-25
+    location: Richmond, VA
+    url: mailto:info@showsbyshowtime.com
+    federation: OCB
+  OCB Battle of Kansas City (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Kansas City, MO
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Thunder City Showdown (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Oklahoma City, OK
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Conquer Las Vegas Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Las Vegas, NV
+    url: mailto:frank@ocbonline.com
+    federation: OCB
+  OCB Spirit of America (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-02
+    location: Cape Cod, MA
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB The Conquer Pro/Am **MEN'S SHOW DAY**(Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-08
+    location: Baltimore, MD
+    url: https://franks.fitness/
+    federation: OCB
+  OCB The Conquer Pro/Am **WOMEN'S SHOW DAY**(Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-09
+    location: Baltimore, MD
+    url: https://franks.fitness/
+    federation: OCB
+  OCB Marble City Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-09
+    location: Knoxville, TN
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Mind Muscle Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-16
+    location: Huntington, WV
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Jersey Natural Open (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-16
+    location: Burlington, NJ
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Mr and Ms Natural Minnesota (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-23
+    location: Minneapolis, MN
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB No Gear Classic Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-23
+    location: Greensboro, NC
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Buckeye Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-30
+    location: Columbus, OH
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Checkered Flag Championships Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: 2026-05-30
+    location: Daytona Beach, FL
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Natural Spartan (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Fargo, ND
+    url: https://www.nxnevents.com
+    federation: OCB
+  OCB Arizona Scorcher Pro/Am (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Phoenix, AZ
+    url: https://bodybeautifulbronzingllc.com/events/ocb-arizona-scorcher-pro-am-june-14-2025-registration/
+    federation: OCB
+  OCB South Carolina Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Greenville, SC
+    url: https://form.jotform.com/232114248094148
+    federation: OCB
+  OCB Elevate (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Rochester, NY
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Emerald Coast Classic (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Pensacola, FL
+    url: https://www.slyzonefitness.com/
+    federation: OCB
+  OCB Spirit of Australia (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Ipswich, Queensland Australia
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Commit to Fit (Body Transformation Challenge):
+    date: 2026-06-06
+    location: Norfolk,VA
+    url: mailto:mthrash1@verizon.net
+    federation: OCB
+  OCB Arkansas Natural (Yorton Cup Qualifier, OCB Pro Qualifier):
+    date: TBA
+    location: Jonesboro, AR
+    url: mailto:mthrash1@verizon.net
+    federation: OCB

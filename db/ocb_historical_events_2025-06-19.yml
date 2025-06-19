@@ -1,0 +1,44 @@
+---
+events:
+  OCB Mid-Atlantic Natural:
+    date: 2025-01-15
+    location: Baltimore, MD
+    state: Maryland
+    federation: OCB
+    status: completed
+    url: https://ocbonline.com
+  WNBF Northeast Championships:
+    date: 2025-02-12
+    location: Boston, MA
+    state: Massachusetts
+    federation: WNBF
+    status: completed
+    url: https://wnbf.com
+  OCB Sunshine State Natural:
+    date: 2025-03-19
+    location: Tampa, FL
+    state: Florida
+    federation: OCB
+    status: completed
+    url: https://ocbonline.com
+  WNBF Southwest Regional:
+    date: 2025-04-16
+    location: Phoenix, AZ
+    state: Arizona
+    federation: WNBF
+    status: completed
+    url: https://wnbf.com
+  OCB Heart of America Natural:
+    date: 2025-05-14
+    location: Kansas City, MO
+    state: Missouri
+    federation: OCB
+    status: completed
+    url: https://ocbonline.com
+  WNBF Pacific Coast Championships:
+    date: 2025-06-07
+    location: San Diego, CA
+    state: California
+    federation: WNBF
+    status: completed
+    url: https://wnbf.com

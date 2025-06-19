@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'date'
+
+# Sample past events for demonstration
+sample_past_events = {
+  "events" => {
+    "OCB Mid-Atlantic Natural" => {
+      "date" => Date.new(2025, 1, 15),
+      "location" => "Baltimore, MD",
+      "state" => "Maryland",
+      "federation" => "OCB",
+      "status" => "completed",
+      "url" => "https://ocbonline.com"
+    },
+    "WNBF Northeast Championships" => {
+      "date" => Date.new(2025, 2, 12),
+      "location" => "Boston, MA", 
+      "state" => "Massachusetts",
+      "federation" => "WNBF",
+      "status" => "completed",
+      "url" => "https://wnbf.com"
+    },
+    "OCB Sunshine State Natural" => {
+      "date" => Date.new(2025, 3, 19),
+      "location" => "Tampa, FL",
+      "state" => "Florida", 
+      "federation" => "OCB",
+      "status" => "completed",
+      "url" => "https://ocbonline.com"
+    },
+    "WNBF Southwest Regional" => {
+      "date" => Date.new(2025, 4, 16),
+      "location" => "Phoenix, AZ",
+      "state" => "Arizona",
+      "federation" => "WNBF", 
+      "status" => "completed",
+      "url" => "https://wnbf.com"
+    },
+    "OCB Heart of America Natural" => {
+      "date" => Date.new(2025, 5, 14),
+      "location" => "Kansas City, MO",
+      "state" => "Missouri",
+      "federation" => "OCB",
+      "status" => "completed", 
+      "url" => "https://ocbonline.com"
+    },
+    "WNBF Pacific Coast Championships" => {
+      "date" => Date.new(2025, 6, 7),
+      "location" => "San Diego, CA",
+      "state" => "California",
+      "federation" => "WNBF",
+      "status" => "completed",
+      "url" => "https://wnbf.com"
+    }
+  }
+}
+
+# Create db directory if it doesn't exist
+Dir.mkdir('db') unless Dir.exist?('db')
+
+# Save sample past events
+filename = "db/ocb_historical_events_#{Date.today.strftime("%Y-%m-%d")}.yml"
+File.write(filename, sample_past_events.to_yaml)
+
+puts "✅ Created sample past shows file: #{filename}"
+puts "📊 Added #{sample_past_events["events"].length} past events:"
+
+sample_past_events["events"].each do |name, data|
+  date_str = data["date"].strftime("%b %d, %Y")
+  puts "  • #{date_str}: #{name} (#{data["location"]})"
+end
+
+puts "\n🚀 Sample past shows ready! Start the web app to see them in the Past Shows tab." 
