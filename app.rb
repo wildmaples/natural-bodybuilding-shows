@@ -4,13 +4,17 @@ require 'sinatra'
 # require "sinatra/reloader" if development?  # Disabled to fix class loading
 require 'rufus-scheduler'
 require 'logger'
+require 'concurrent-ruby'
 
-load 'app/shows.rb'
-load 'lib/scraper_manager.rb'
+require_relative 'app/shows.rb'
+require_relative 'lib/scraper_manager.rb'
 
 # Set up logging
 logger = Logger.new(STDOUT)
 logger.level = Logger::INFO
+
+# Ensure db directory exists
+Dir.mkdir('db') unless Dir.exist?('db')
 
 # Initialize components
 scraper_manager = ScraperManager.new
@@ -31,11 +35,22 @@ end
 
 # Also scrape on startup if data is stale (include historical on first run)
 Thread.new do
-  if scraper_manager.data_needs_refresh?
-    logger.info "Data is stale, scraping on startup..."
-    scraper_manager.scrape_all_sources(include_historical: true)
+  begin
+    if scraper_manager.data_needs_refresh?
+      logger.info "Data is stale, scraping on startup..."
+      scraper_manager.scrape_all_sources(include_historical: true)
+      logger.info "Startup scraping completed"
+    else
+      logger.info "Data is fresh, skipping startup scrape"
+    end
+  rescue => e
+    logger.error "Error during startup scrape: #{e.message}"
   end
 end
+
+# Production configuration for deployment
+set :port, ENV['PORT'] || 4567
+set :bind, '0.0.0.0'
 
 get '/' do
   begin
