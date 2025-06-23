@@ -62,14 +62,14 @@ class Shows
     # Load current WNBF data
     wnbf_file = most_recent_file("wnbf_events")
     if wnbf_file && File.exist?(wnbf_file)
-      wnbf_data = YAML.load_file(wnbf_file, permitted_classes: [Date])
+      wnbf_data = YAML.load_file(wnbf_file, permitted_classes: [Date], aliases: true)
       @shows.merge!(wnbf_data["events"] || {}) if wnbf_data
     end
 
     # Load current OCB data  
     ocb_file = most_recent_file("ocb_events")
     if ocb_file && File.exist?(ocb_file)
-      ocb_data = YAML.load_file(ocb_file, permitted_classes: [Date])
+      ocb_data = YAML.load_file(ocb_file, permitted_classes: [Date], aliases: true)
       @shows.merge!(ocb_data["events"] || {}) if ocb_data
     end
 
@@ -77,7 +77,7 @@ class Shows
     ocb_historical_files = Dir.glob("db/ocb_historical_events_*.yml")
     ocb_historical_files.each do |file|
       next unless File.exist?(file)
-      historical_data = YAML.load_file(file, permitted_classes: [Date])
+      historical_data = YAML.load_file(file, permitted_classes: [Date], aliases: true)
       @shows.merge!(historical_data["events"] || historical_data || {}) if historical_data
     end
 
@@ -85,7 +85,7 @@ class Shows
     wnbf_historical_files = Dir.glob("db/wnbf_historical_events_*.yml")
     wnbf_historical_files.each do |file|
       next unless File.exist?(file)
-      historical_data = YAML.load_file(file, permitted_classes: [Date])
+      historical_data = YAML.load_file(file, permitted_classes: [Date], aliases: true)
       @shows.merge!(historical_data["events"] || historical_data || {}) if historical_data
     end
 

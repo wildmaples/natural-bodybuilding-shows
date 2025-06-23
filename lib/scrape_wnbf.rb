@@ -64,7 +64,7 @@ class WnbfScraper
     @logger.info "Checking for completed shows in #{latest_file}"
     
     begin
-      existing_data = YAML.load_file(latest_file, permitted_classes: [Date])
+      existing_data = YAML.load_file(latest_file, permitted_classes: [Date], aliases: true)
       existing_events = existing_data&.dig("events") || existing_data || {}
       
       past_events = {}
@@ -107,7 +107,7 @@ class WnbfScraper
     existing_historical = {}
     if File.exist?(historical_filename)
       begin
-        historical_data = YAML.load_file(historical_filename, permitted_classes: [Date])
+        historical_data = YAML.load_file(historical_filename, permitted_classes: [Date], aliases: true)
         existing_historical = historical_data&.dig("events") || historical_data || {}
       rescue => e
         @logger.warn "Failed to load existing historical data: #{e.message}"
