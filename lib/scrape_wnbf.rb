@@ -7,7 +7,7 @@ require 'logger'
 require_relative '../bin/utils'
 
 class WnbfScraper
-  BASE_URL = "https://worldnaturalbb.com/events/"
+  BASE_URL = "https://worldnaturalbb.com/usa-events/"
   
   def initialize(logger = nil)
     @logger = logger || Logger.new(STDOUT)
@@ -139,15 +139,15 @@ class WnbfScraper
   def parse_events(html)
     wnbf_events = {}
     
-    # Look for event containers using The Events Calendar structure
-    events = html.css('.tribe-events-calendar-list__event')
+    # Look for event containers using the new Bricks theme structure
+    events = html.css('.fr-timeline-charlie__meta')
     
     @logger.info "Found #{events.count} event containers on page"
     
     events.each do |event|
       begin
         # Extract event name from title link
-        title_link = event.css('.tribe-events-calendar-list__event-title-link').first
+        title_link = event.css('h2 a').first
         next unless title_link
         
         name = title_link.text.strip
@@ -156,30 +156,14 @@ class WnbfScraper
         next if name.empty? || name.length < 5
         
         # Extract date from datetime element
-        datetime_element = event.css('.tribe-events-calendar-list__event-datetime').first
+        datetime_element = event.css('time.event__start-date').first
         date_value = datetime_element ? extract_date_from_datetime(datetime_element) : "TBA"
         
         # Convert to Date object if it's a string, otherwise use as-is
         parsed_date = date_value.is_a?(Date) ? date_value : Utils.convert_date(date_value)
         
-        # Extract venue information
-        venue_title = event.css('.tribe-events-calendar-list__event-venue-title').first
-        venue_address = event.css('.tribe-events-calendar-list__event-venue-address').first
-        
-        location = ""
-        if venue_title
-          location = venue_title.text.strip
-          if venue_address
-            address_text = venue_address.text.strip
-            location += ", #{address_text}" unless address_text.empty?
-          end
-        else
-          # Fallback: look in event description
-          description = event.css('.tribe-events-calendar-list__event-description').first
-          location = description ? description.text.strip : "TBA"
-        end
-        
-        location = "TBA" if location.empty?
+        # Extract location from individual event page
+        location = fetch_event_location(url)
         
         # Clean up the name and ensure it's valid
         name = clean_event_name(name)
@@ -201,24 +185,70 @@ class WnbfScraper
     wnbf_events
   end
 
+  def fetch_event_location(event_url)
+    return "TBA" unless event_url
+    
+    begin
+      uri = URI.parse(event_url)
+      response = Net::HTTP.get_response(uri)
+      
+      unless response.is_a?(Net::HTTPSuccess)
+        @logger.warn "Failed to fetch event page for location: #{response.code}"
+        return "TBA"
+      end
+      
+      html = Nokogiri::HTML(response.body)
+      
+      # Look for location information
+      location_element = html.css('.main-event__location-text').first
+      if location_element
+        location = location_element.text.strip
+        return location unless location.empty?
+      end
+      
+      # Fallback: look for any element with location in class name
+      location_elements = html.css('[class*="location"]')
+      location_elements.each do |el|
+        location = el.text.strip
+        return location if location.length > 0 && location.length < 100
+      end
+      
+      "TBA"
+    rescue => e
+      @logger.warn "Failed to fetch location for event: #{e.message}"
+      "TBA"
+    end
+  end
+
   def extract_date_from_datetime(datetime_element)
-    # Look for datetime attribute first (preferred format: YYYY-MM-DD)
+    # First try to extract date from text content (more reliable)
+    text = datetime_element.text.strip
+    
+    # Extract date from text like "Starts July 19, 2025 10:00 am"
+    if text.match(/Starts\s+(\w+\s+\d+,\s+\d{4})/)
+      date_part = text.match(/Starts\s+(\w+\s+\d+,\s+\d{4})/)[1]
+      begin
+        return Date.parse(date_part)
+      rescue ArgumentError
+        @logger.warn "Could not parse date from text: #{date_part}"
+      end
+    end
+    
+    # Fallback to datetime attribute if text parsing fails
     datetime_attr = datetime_element['datetime']
     if datetime_attr && !datetime_attr.empty?
-      # Parse the ISO date format directly
+      # Parse the date format (MM/DD/YYYY)
       begin
-        return Date.parse(datetime_attr)
+        if datetime_attr.include?('/')
+          month, day, year = datetime_attr.split('/')
+          return Date.new(year.to_i, month.to_i, day.to_i)
+        else
+          return Date.parse(datetime_attr)
+        end
       rescue ArgumentError
         @logger.warn "Could not parse datetime attribute: #{datetime_attr}"
       end
     end
-    
-    # Fallback to text content
-    text = datetime_element.text.strip
-    
-    # Extract just the date part (before any @ symbol)
-    date_part = text.split('@').first&.strip
-    return date_part if date_part && !date_part.empty?
     
     "TBA"
   end
