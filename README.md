@@ -73,6 +73,27 @@ A comprehensive web application that automatically scrapes, archives, and displa
    ruby bin/create_sample_past_shows
    ```
 
+## 📊 Data Management
+
+### Database Files
+The application uses YAML files in the `db/` directory to store show data. These files are **automatically generated** by the scraping system and should **NOT be committed to git**.
+
+- **Current Events**: `*_events_YYYY-MM-DD.yml` (e.g., `wnbf_events_2025-07-19.yml`)
+- **Historical Events**: `*_historical_events_YYYY-MM-DD.yml` (e.g., `wnbf_historical_events_2025-07-19.yml`)
+
+### Why Not Commit Database Files?
+- **Automated Generation**: Data is scraped daily at 6 AM and when the app starts
+- **Production Deployment**: Fresh data is generated automatically in production
+- **Data Freshness**: The app checks for stale data and refreshes automatically
+- **File Proliferation**: Date-stamped files change frequently and would clutter git history
+
+### Production Deployment
+When deploying to production:
+1. The app will automatically scrape fresh data on startup if needed
+2. Daily scraping at 6 AM keeps data current
+3. No manual database file management required
+4. Historical data is preserved and merged automatically
+
 ## 🎯 Usage
 
 ### Running the Web Application
