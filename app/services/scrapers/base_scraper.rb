@@ -1,6 +1,6 @@
-require "net/http"
-require "openssl"
-require "nokogiri"
+require 'net/http'
+require 'openssl'
+require 'nokogiri'
 
 module Scrapers
   class BaseScraper
@@ -12,7 +12,7 @@ module Scrapers
     end
 
     def scrape
-      raise NotImplementedError, "Subclasses must implement #scrape"
+      raise NotImplementedError, 'Subclasses must implement #scrape'
     end
 
     def scrape_and_save
@@ -29,13 +29,17 @@ module Scrapers
         uri = URI.parse(url)
 
         http = Net::HTTP.new(uri.host, uri.port)
-        http.use_ssl = (uri.scheme == "https")
+        http.use_ssl = (uri.scheme == 'https')
         http.verify_mode = OpenSSL::SSL::VERIFY_NONE # Allow sites with cert issues
         http.open_timeout = 30
         http.read_timeout = 30
 
         request = Net::HTTP::Get.new(uri)
-        request["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+        request['User-Agent'] =
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        request['Accept'] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+        request['Accept-Language'] = 'en-US,en;q=0.5'
+        request['Connection'] = 'keep-alive'
 
         response = http.request(request)
 
@@ -95,18 +99,19 @@ module Scrapers
     end
 
     def convert_date(date_str)
-      return nil if date_str.nil? || date_str == "TBA" || date_str.strip.empty?
+      return nil if date_str.nil? || date_str == 'TBA' || date_str.strip.empty?
 
       # Handle date ranges - use first date only
-      if date_str.include?("-") && !date_str.match?(/^\d{4}-\d{2}-\d{2}$/)
-        idx = date_str.index("-") - 1
+      if date_str.include?('-') && !date_str.match?(/^\d{4}-\d{2}-\d{2}$/)
+        idx = date_str.index('-') - 1
         date_str = date_str[0..idx].strip
       end
 
-      if date_str.include?("/")
+      if date_str.include?('/')
         # MM/DD/YYYY format
-        parts = date_str.split("/")
+        parts = date_str.split('/')
         return nil if parts.length != 3
+
         Date.new(parts[2].to_i, parts[0].to_i, parts[1].to_i)
       else
         Date.parse(date_str)
