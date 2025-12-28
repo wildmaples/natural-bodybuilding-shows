@@ -1,0 +1,78 @@
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  <!-- Header -->
+  <header class="border-b border-slate-700/50 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+          natty.show
+        </h1>
+        <nav class="flex gap-6">
+          <%= link_to "Home", root_path, class: "text-slate-300 hover:text-amber-400 transition-colors" %>
+          <%= link_to "About", about_path, class: "text-amber-400" %>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50">
+      <h1 class="text-3xl font-bold text-slate-100 mb-6">About natty.show</h1>
+
+      <div class="prose prose-invert prose-slate max-w-none">
+        <section class="mb-8">
+          <h2 class="text-xl font-semibold text-amber-400 mb-4">What This Site Does</h2>
+          <p class="text-slate-300 leading-relaxed">
+            All natural bodybuilding competition schedules in one convenient location! Instead of checking each organization's website separately, you can see all upcoming natural bodybuilding shows in one place.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-xl font-semibold text-amber-400 mb-4">For Competitors</h2>
+          <p class="text-slate-300 leading-relaxed mb-4">
+            Whether you're looking to compete in your first natural bodybuilding show or you're a seasoned competitor planning your competition season, this site helps you:
+          </p>
+          <ul class="list-disc list-inside text-slate-300 space-y-2">
+            <li>Find shows in your area or region</li>
+            <li>Plan your competition calendar</li>
+            <li>Discover new federations and events</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-amber-400 mb-6">Natural Bodybuilding Federations</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- WNBF Card -->
+            <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700/50">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/40">WNBF</span>
+              </div>
+              <h3 class="text-lg font-semibold text-slate-100 mb-2">World Natural Bodybuilding Federation</h3>
+              <a href="https://worldnaturalbb.com/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 hover:bg-orange-500/30 text-orange-400 rounded-lg transition-colors mt-4">
+                Visit WNBF Website →
+              </a>
+            </div>
+
+            <!-- OCB Card -->
+            <div class="bg-slate-900/50 rounded-lg p-6 border border-slate-700/50">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/40">OCB</span>
+              </div>
+              <h3 class="text-lg font-semibold text-slate-100 mb-2">Organization of Competitive Bodybuilders</h3>
+              <a href="https://ocbonline.com/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg transition-colors mt-4">
+                Visit OCB Website →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-8 p-6 bg-slate-900/50 rounded-lg border border-slate-700/50">
+          <h3 class="text-lg font-semibold text-slate-100 mb-2">Want to see another federation listed?</h3>
+          <p class="text-slate-400 mb-4">Know of another natural bodybuilding federation that should be included? Let us know!</p>
+          <a href="mailto:hi@natty.show?subject=New Natural Federation Suggestion" class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold rounded-lg transition-colors">
+            Suggest a Federation →
+          </a>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>

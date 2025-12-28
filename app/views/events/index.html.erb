@@ -1,0 +1,144 @@
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  <!-- Header -->
+  <header class="border-b border-slate-700/50 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+          natty.show
+        </h1>
+        <nav class="flex gap-6">
+          <%= link_to "Home", root_path, class: "text-slate-300 hover:text-amber-400 transition-colors" %>
+          <%= link_to "About", about_path, class: "text-slate-300 hover:text-amber-400 transition-colors" %>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Status Bar -->
+    <div class="bg-slate-800/50 rounded-xl p-4 mb-8 border border-slate-700/50">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="text-slate-400 text-sm">
+          <% if @last_updated %>
+            <span class="text-slate-300"><strong>Last Updated:</strong> <%= @last_updated.strftime("%B %d, %Y at %I:%M %p") %></span>
+            <span class="mx-2">•</span>
+            <span>Data freshness: <%= @data_freshness %></span>
+          <% else %>
+            <span>No data available yet</span>
+          <% end %>
+        </div>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+            <%= @upcoming_count %> upcoming
+          </span>
+          <span class="px-3 py-1 rounded-full bg-slate-600/50 text-slate-400 border border-slate-600/50">
+            <%= @past_count %> past
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search/Filter Form -->
+    <div class="bg-slate-800/50 rounded-xl p-6 mb-8 border border-slate-700/50">
+      <h2 class="text-lg font-semibold text-slate-200 mb-4">🔍 Search Shows</h2>
+      <%= form_with url: root_path, method: :get, local: true, class: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4" do |f| %>
+        <div>
+          <%= label_tag :name, "Show Name", class: "block text-sm font-medium text-slate-400 mb-1" %>
+          <%= text_field_tag :name, params[:name], placeholder: "e.g. Naturalmania", class: "w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500" %>
+        </div>
+        <div>
+          <%= label_tag :location, "Location", class: "block text-sm font-medium text-slate-400 mb-1" %>
+          <%= text_field_tag :location, params[:location], placeholder: "e.g. New York, CA", class: "w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500" %>
+        </div>
+        <div>
+          <%= label_tag :federation, "Federation", class: "block text-sm font-medium text-slate-400 mb-1" %>
+          <%= select_tag :federation, options_for_select([["All Federations", ""], ["OCB", "OCB"], ["WNBF", "WNBF"]], params[:federation]), class: "w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500" %>
+        </div>
+        <div>
+          <%= label_tag :date_from, "Date From", class: "block text-sm font-medium text-slate-400 mb-1" %>
+          <%= date_field_tag :date_from, params[:date_from], class: "w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500" %>
+        </div>
+        <div class="flex items-end gap-2">
+          <%= submit_tag "Search", class: "flex-1 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold rounded-lg transition-colors cursor-pointer" %>
+          <%= link_to "Clear", root_path, class: "px-4 py-2 bg-slate-600 hover:bg-slate-500 text-slate-200 rounded-lg transition-colors text-center" %>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="flex border-b border-slate-700 mb-6" id="tabs">
+      <button type="button" class="tab-btn px-6 py-3 text-slate-300 font-medium border-b-2 border-transparent hover:text-amber-400 transition-colors" data-tab="upcoming" onclick="switchTab('upcoming')">
+        🗓️ Upcoming Shows (<span id="upcoming-count"><%= @upcoming_count %></span>)
+      </button>
+      <button type="button" class="tab-btn px-6 py-3 text-slate-300 font-medium border-b-2 border-transparent hover:text-amber-400 transition-colors" data-tab="past" onclick="switchTab('past')">
+        📂 Past Shows (<span id="past-count"><%= @past_count %></span>)
+      </button>
+    </div>
+
+    <!-- Upcoming Events Tab -->
+    <div id="upcoming-tab" class="tab-content">
+      <% if @upcoming_events.any? %>
+        <div class="space-y-4">
+          <% @upcoming_events.each do |event| %>
+            <%= render partial: "event_card", locals: { event: event, past: false } %>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="text-center py-16 text-slate-400">
+          <div class="text-5xl mb-4">🏆</div>
+          <h3 class="text-xl font-semibold text-slate-300 mb-2">No upcoming shows found</h3>
+          <p>Check back later as new shows are added to the schedule.</p>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Past Events Tab -->
+    <div id="past-tab" class="tab-content hidden">
+      <% if @past_events.any? %>
+        <div class="space-y-4">
+          <% @past_events.each do |event| %>
+            <%= render partial: "event_card", locals: { event: event, past: true } %>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="text-center py-16 text-slate-400">
+          <div class="text-5xl mb-4">📁</div>
+          <h3 class="text-xl font-semibold text-slate-300 mb-2">No past shows found</h3>
+          <p>Past shows will appear here after their event dates have passed.</p>
+        </div>
+      <% end %>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-700/50 bg-slate-900/50 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <p class="text-center text-slate-500 text-sm">
+        ⏰ Data automatically updates daily at 6:00 AM
+      </p>
+    </div>
+  </footer>
+</div>
+
+<script>
+  function switchTab(tabName) {
+    // Update tab buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('border-amber-400', 'text-amber-400');
+      btn.classList.add('border-transparent');
+    });
+    document.querySelector(`[data-tab="${tabName}"]`).classList.add('border-amber-400', 'text-amber-400');
+    document.querySelector(`[data-tab="${tabName}"]`).classList.remove('border-transparent');
+
+    // Update tab content
+    document.querySelectorAll('.tab-content').forEach(content => {
+      content.classList.add('hidden');
+    });
+    document.getElementById(`${tabName}-tab`).classList.remove('hidden');
+  }
+
+  // Initialize first tab as active
+  document.addEventListener('DOMContentLoaded', function() {
+    switchTab('upcoming');
+  });
+</script>

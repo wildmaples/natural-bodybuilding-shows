@@ -1,0 +1,43 @@
+<div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 hover:border-slate-600 transition-all <%= 'opacity-75' if past %>">
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div class="flex items-start gap-4">
+      <!-- Date -->
+      <div class="text-center min-w-[70px]">
+        <div class="text-2xl font-bold <%= past ? 'text-slate-500' : 'text-amber-400' %>">
+          <%= event.date ? event.date.day : "TBA" %>
+        </div>
+        <% if event.date %>
+          <div class="text-xs uppercase <%= past ? 'text-slate-500' : 'text-slate-400' %>">
+            <%= event.date.strftime("%b %Y") %>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- Event Details -->
+      <div class="flex-1">
+        <h3 class="text-lg font-semibold <%= past ? 'text-slate-400' : 'text-slate-100' %>">
+          <% if event.url.present? %>
+            <a href="<%= event.url %>" target="_blank" class="hover:text-amber-400 transition-colors">
+              <%= event.name %>
+              <span class="text-xs">↗</span>
+            </a>
+          <% else %>
+            <%= event.name %>
+          <% end %>
+        </h3>
+        <% if event.location.present? %>
+          <p class="text-sm <%= past ? 'text-slate-500' : 'text-slate-400' %> mt-1">
+            📍 <%= event.location %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Federation Badge -->
+    <div>
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold <%= federation_badge_classes(event.federation, past) %>">
+        <%= event.federation %>
+      </span>
+    </div>
+  </div>
+</div>
