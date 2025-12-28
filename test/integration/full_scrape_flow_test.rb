@@ -2,6 +2,8 @@ require "test_helper"
 
 class FullScrapeFlowTest < ActionDispatch::IntegrationTest
   test "scraping populates database and events display on homepage" do
+    skip "Skipping live website test in CI" if ENV["CI"]
+
     # Start with empty database
     Event.delete_all
     assert_equal 0, Event.count

@@ -2,6 +2,8 @@ require "test_helper"
 
 class WnbfScraperTest < ActiveSupport::TestCase
   test "scrapes real WNBF events from live website" do
+    skip "Skipping live website test in CI" if ENV["CI"]
+
     scraper = Scrapers::WnbfScraper.new
     events = scraper.scrape
 
