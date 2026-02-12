@@ -30,7 +30,7 @@ module Scrapers
 
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = (uri.scheme == 'https')
-        http.verify_mode = OpenSSL::SSL::VERIFY_NONE # Allow sites with cert issues
+        http.verify_mode = OpenSSL::SSL::VERIFY_PEER
         http.open_timeout = 30
         http.read_timeout = 30
 
