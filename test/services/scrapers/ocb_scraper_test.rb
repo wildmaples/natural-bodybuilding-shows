@@ -34,38 +34,32 @@ class OcbScraperTest < ActiveSupport::TestCase
 
   # --- extract_event_location ---
 
-  test "extract_event_location finds City, State in h3" do
-    html = build_html('<h3 class="elementor-heading-title">Wilmington, North Carolina</h3>')
+  test "extract_event_location finds text after Location heading" do
+    html = build_html("<h4>Location</h4><p>Wilmington, North Carolina</p>")
     assert_equal "Wilmington, North Carolina", @scraper.send(:extract_event_location, html)
   end
 
-  test "extract_event_location finds City, State in h4" do
-    html = build_html("<h4>Bloomington, Minnesota</h4>")
-    assert_equal "Bloomington, Minnesota", @scraper.send(:extract_event_location, html)
-  end
-
-  test "extract_event_location handles multi-word city names" do
-    html = build_html("<h3>Atlantic City, New Jersey</h3>")
-    assert_equal "Atlantic City, New Jersey", @scraper.send(:extract_event_location, html)
-  end
-
-  test "extract_event_location ignores non-location headings" do
-    html = build_html(<<~HTML)
-      <h3>OCB Body Sculpting Open</h3>
-      <h3>02-14-2026</h3>
-      <h3>Wilmington, North Carolina</h3>
-    HTML
-    assert_equal "Wilmington, North Carolina", @scraper.send(:extract_event_location, html)
-  end
-
-  test "extract_event_location ignores headings over 60 chars" do
-    long = "A" * 30 + ", " + "B" * 30
-    html = build_html("<h3>#{long}</h3><h3>Houston, Texas</h3>")
+  test "extract_event_location is case-insensitive on heading" do
+    html = build_html("<h4>LOCATION</h4><p>Houston, Texas</p>")
     assert_equal "Houston, Texas", @scraper.send(:extract_event_location, html)
   end
 
-  test "extract_event_location returns nil when no location found" do
-    html = build_html("<h3>Just a title</h3><p>Some text</p>")
+  test "extract_event_location skips non-location h4 headings" do
+    html = build_html(<<~HTML)
+      <h4>Date</h4><p>02-14-2026</p>
+      <h4>Location</h4><p>Bloomington, Minnesota</p>
+      <h4>Time</h4><p>10:00am</p>
+    HTML
+    assert_equal "Bloomington, Minnesota", @scraper.send(:extract_event_location, html)
+  end
+
+  test "extract_event_location returns nil when no Location heading" do
+    html = build_html("<h4>Date</h4><p>02-14-2026</p>")
+    assert_nil @scraper.send(:extract_event_location, html)
+  end
+
+  test "extract_event_location returns nil when sibling is empty" do
+    html = build_html("<h4>Location</h4><p></p>")
     assert_nil @scraper.send(:extract_event_location, html)
   end
 

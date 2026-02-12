@@ -154,14 +154,17 @@ module Scrapers
     end
 
     def extract_event_location(html)
-      # OCB event pages show "City, State" in headings
-      html.css("h3, h4").each do |heading|
-        text = heading.text.strip
-        next if text.empty? || text.length > 60
+      # OCB event pages: <h4>Location</h4> followed by <p>City, State</p>
+      html.css("h4").each do |heading|
+        next unless heading.text.strip.downcase == "location"
 
-        if text.match?(/\A[A-Z][a-zA-Z\s.'-]+,\s+[A-Z][a-zA-Z\s]+\z/)
-          return text
-        end
+        sibling = heading.next_element
+        next unless sibling
+
+        text = sibling.text.strip
+        next if text.empty? || text.length > 100
+
+        return text
       end
 
       nil
