@@ -17,22 +17,20 @@ module Scrapers
     private
 
     def parse_events(html)
-      events = []
-      # Events are in list items with fr-timeline-charlie__list-item class
       event_containers = html.css(".fr-timeline-charlie__list-item")
 
       log_info("Found #{event_containers.count} event containers on page")
 
-      event_containers.each do |container|
-        event_data = parse_event_container(container)
-        events << event_data if event_data
-      end
+      # First pass: parse event data from the main page (no HTTP calls)
+      parsed = event_containers.filter_map { |c| parse_event_container(c) }
 
-      events
+      # Second pass: fetch locations concurrently
+      fetch_locations_concurrently(parsed)
+
+      parsed
     end
 
     def parse_event_container(container)
-      # Find the title link within the heading
       title_link = container.css(".fr-timeline-charlie__heading a").first
       title_link ||= container.css("h2 a").first
       return nil unless title_link
@@ -42,28 +40,48 @@ module Scrapers
 
       return nil if name.empty? || name.length < 5
 
-      # Extract date from datetime element
       datetime_element = container.css("time.event__start-date").first
       date = datetime_element ? extract_date_from_datetime(datetime_element) : nil
 
-      # Fetch location from individual event page
-      location = fetch_event_location(url)
-
-      # Clean up the name
       name = clean_event_name(name)
       return nil if name.length < 5
 
       {
         name: name,
         date: date,
-        location: location,
-        state: extract_state(location),
+        location: nil,
+        state: nil,
         url: url || "",
         federation: FEDERATION
       }
     rescue StandardError => e
       log_warn("Skipping event due to parsing error: #{e.message}")
       nil
+    end
+
+    def fetch_locations_concurrently(events)
+      urls = events.map { |e| e[:url] }.select(&:present?)
+      return if urls.empty?
+
+      pool = Concurrent::FixedThreadPool.new([urls.size, 4].min)
+      futures = {}
+
+      events.each do |event|
+        next if event[:url].blank?
+
+        futures[event] = Concurrent::Promises.future_on(pool) do
+          fetch_event_location(event[:url])
+        end
+      end
+
+      futures.each do |event, future|
+        location = future.value(60) # 60s timeout per future
+        event[:location] = location
+        event[:state] = extract_state(location)
+      end
+    ensure
+      pool&.shutdown
+      pool&.wait_for_termination(10)
     end
 
     def fetch_event_location(event_url)
